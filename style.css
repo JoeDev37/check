@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Lilita+One&family=Poetsen+One&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+ 
+body {
+    margin: 0;
+    padding: 0;
+    color: rgb(24, 25, 38);
+    font-family: "Lilita One", sans-serif;
+}
+
+.container {
+    background-image: linear-gradient(45deg, #11111b, #11111b, rgb(4, 165, 229), #11111b, #11111b, rgb(4, 165, 229), #11111b, #11111b, rgb(4, 165, 229));
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    background-size: 400% 100%;
+    animation: shiftBackground 5s linear infinite;
+}
+
+@keyframes shiftBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+.child {
+    background-color: rgb(108, 111, 133);
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#removeTask {
+    margin-right: 10px;
+    background-color: rgb(230, 69, 83);
+}
+
+#removeOneTask {
+    background-color: rgb(234, 153, 156);
+    margin-right: 15px;
+}
+
+input {
+    background-color: rgb(54, 58, 79);
+    color: rgb(24, 25, 38);
+    font-family: "Lilita One", sans-serif;
+    padding: 10px 20px 10px 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    outline: 3px solid #3498db;
+    outline-offset: 0;
+    animation: outlineMove 2s linear infinite;
+}
+
+input::placeholder {
+    color: rgb(24, 25, 38);
+}
+
+@keyframes outlineMove {
+
+    0%, 100% {
+        outline-offset: 0; 
+        outline-color: rgb(4, 165, 229);
+    }
+
+    50% {
+        outline-offset: 3px;
+        outline-color: #11111b;
+    }
+}
+
+button {
+    padding: 10px 20px;
+    font-family: "Lilita One", sans-serif;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#btnSubmit {
+    background-color: rgb(64, 160, 43);
+}
+
+#someOutPut {
+    background-color: rgb(48, 52, 70);
+    font-family: "Lilita One", sans-serif;
+    width: 100%;
+    height: 87%;
+    border-radius: 10px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 50;
+}
+
+li {
+    font-weight: 700;
+    font-size: 50;
+    list-style-type: none;
+}
+
+@media only screen and (max-width: 666px) {
+    #removeTask {
+        margin-right: 3px;
+    }
+
+    #removeOneTask {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    input {
+        margin-left: 3;
+        margin-right: 3;
+    }
+
+    #btnSubmit {
+        margin-left: 3px;
+        margin-right: 7px;
+    }
+
+    #outPut {
+        font-size: 30;
+    }
+}
